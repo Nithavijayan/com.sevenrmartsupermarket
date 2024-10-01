@@ -55,7 +55,6 @@ public class HomePage {
 	public List<String> getAllCardNames() {
 		List<String> cardnames = generalutility.getTextOf_Elements(homePageCards);
 		return cardnames;
-
 	}
 
 	public AdminUsersPage clickOnAdminUsersMoreInfo() {

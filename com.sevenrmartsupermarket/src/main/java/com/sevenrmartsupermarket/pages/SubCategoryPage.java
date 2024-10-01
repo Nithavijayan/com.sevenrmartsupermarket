@@ -8,11 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.sevenrmartsupermarket.constants.Constants;
 import com.sevenrmartsupermarket.utilities.PageUtility;
+import com.sevenrmartsupermarket.utilities.WaitUtility;
 
 public class SubCategoryPage {
 
 	WebDriver driver;
 	PageUtility pageutility;
+	WaitUtility wait;
 
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	private WebElement newButton;
@@ -72,6 +74,8 @@ public class SubCategoryPage {
 	public String getDeleteAlertMessage()
 	{
 		pageutility = new PageUtility(driver);
+		wait=new WaitUtility();
+		wait.waitForClickable(driver, deleteButton, 10);
 		deleteButton.click();
 		String message= pageutility.alertGetText();
 		pageutility.alertAccept();

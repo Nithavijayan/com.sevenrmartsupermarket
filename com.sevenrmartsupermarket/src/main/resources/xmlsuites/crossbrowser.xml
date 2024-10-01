@@ -1,0 +1,25 @@
+<suite name="crossbrowsertesting" thread-count="5" parallel="tests">
+	<listeners>
+		<listener
+			class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"></listener>
+	</listeners>
+	<test name="testing in chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sevenrmartsupermarket.tests.LoginTest"></class>
+		</classes>
+
+	</test>
+	<test name="testing in edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.sevenrmartsupermarket.tests.LoginTest"></class>
+		</classes>
+	</test>
+	<test name="testing in firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.sevenrmartsupermarket.tests.LoginTest"></class>
+		</classes>
+	</test>
+</suite>

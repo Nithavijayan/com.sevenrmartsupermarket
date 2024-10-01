@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [sevenrmart]">
+  <test thread-count="5" parallel="methods" name="testone(failed)">
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.HomeTest">
+        <methods>
+          <include name="verifyProfileName"/>
+          <include name="verifyCategoryMenu"/>
+          <include name="initializeBrowser"/>
+          <include name="getStyleOfwebsiteName"/>
+          <include name="terminateSession"/>
+          <include name="verifyAdminUsersmenu"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.HomeTest -->
+    </classes>
+  </test> <!-- testone(failed) -->
+  <test thread-count="5" parallel="methods" name="testtwo(failed)">
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyLoginWithMutipleUsers"/>
+          <include name="terminateSession"/>
+          <include name="verifyAdminLogin"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
+    </classes>
+  </test> <!-- testtwo(failed) -->
+  <test thread-count="5" parallel="methods" name="testthree(failed)">
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.AdminUsersTest">
+        <methods>
+          <include name="getThirdRowDataOfTable"/>
+          <include name="getColorOfNewButton"/>
+          <include name="initializeBrowser"/>
+          <include name="getTextOfSearchButton"/>
+          <include name="terminateSession"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.AdminUsersTest -->
+    </classes>
+  </test> <!-- testthree(failed) -->
+</suite> <!-- Failed suite [sevenrmart] -->

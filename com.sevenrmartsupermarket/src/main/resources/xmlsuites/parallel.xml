@@ -1,0 +1,31 @@
+<suite name="validation suite" thread_count="2" parallel="classes">
+	<listeners>
+		<listener
+			class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"></listener>
+	</listeners>
+	<test name="UI test">
+		<classes>
+			<class name="com.sevenrmartsupermarket.tests.LoginTest"></class>
+		</classes>
+	</test>
+	<test name="integration test">
+		<classes>
+			<class name="com.sevenrmartsupermarket.tests.HomeTest"></class>
+		</classes>
+	</test>
+	<test name="sanity test">
+		<classes>
+			<class name="com.sevenrmartsupermarket.tests.AdminUsersTest"></class>
+		</classes>
+	</test>
+	<test name="functionality test">
+	<classes>
+		<class name="com.sevenrmartsupermarket.tests.CategoryTest"></class>
+		</classes>
+	</test>
+	<test name="smoke test">
+	<classes>
+		<class name="com.sevenrmartsupermarket.tests.SubCategoryTest"></class>
+		</classes>
+	</test>
+</suite>

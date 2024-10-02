@@ -41,7 +41,7 @@ public class PageUtility {
 	public void mouseClick(WebElement element) {
 		Actions action = new Actions(driver);
 		action.click(element).build().perform();
-		;
+
 	}
 
 	public void mouseDoubleClick(WebElement element) {

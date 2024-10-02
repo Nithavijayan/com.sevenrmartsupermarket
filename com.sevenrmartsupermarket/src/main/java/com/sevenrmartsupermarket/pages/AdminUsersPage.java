@@ -56,19 +56,19 @@ public class AdminUsersPage {
 	}
 
 
-	public AdminUsersPage enterAdminUserName(String userName) {
+	public void enterAdminUserName(String userName) {
 		userNameField.sendKeys(userName);
-		return this;
+	
 	}
 
-	public AdminUsersPage enterAdminPassword(String password) {
+	public void enterAdminPassword(String password) {
 		passwordField.sendKeys(password);
-		return this;
+	
 	}
 
-	public AdminUsersPage selectAdminUserType() {
+	public void selectAdminUserType() {
 		pageutility.selectByIndex(userTypeDropDown, 2);
-		return this;
+
 	}
 
 	public String enterNewAdminUser(String userName, String password) {
@@ -96,7 +96,7 @@ public class AdminUsersPage {
 		return this;
 	}
 
-	public AdminUsersPage clickonSearchButton() {
+	public AdminUsersPage clickOnSearchButton() {
 		adminSearchButton.click();
 		return this;
 	}
@@ -105,7 +105,7 @@ public class AdminUsersPage {
 
 	public AdminUsersPage searchAdminUser(String userName, int index) {
 		searchButton.click();
-		return this.enterUserName(userName).enterUserTypeDropDown(index).clickonSearchButton();
+		return this.enterUserName(userName).enterUserTypeDropDown(index).clickOnSearchButton();
 		
 
 	}

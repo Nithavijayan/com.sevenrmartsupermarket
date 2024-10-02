@@ -15,7 +15,7 @@ public class SubCategoryTest extends Base {
 	SubCategoryPage subcategorypage;
 
 	@Test(groups={"sanity","regression"})
-	public void verifyNewSubCategoryTitle() {
+	public void verifyTitleOfNewSubCategory() {
 		loginpage = new LoginPage(driver);
 		homepage = loginpage.login();
 		subcategorypage = homepage.clickOnSubCategoryMoreInfo();
@@ -25,7 +25,7 @@ public class SubCategoryTest extends Base {
 		Assert.assertEquals( title, "List Sub Categories | 7rmart supermarket");
 	}
 	@Test(groups = "sanity")
-	public void verifySubCategorySearch()
+	public void verifyHeaderOfSubCategorySearch()
 	{
 		loginpage=new LoginPage(driver);
 		homepage=loginpage.login();
@@ -35,7 +35,7 @@ public class SubCategoryTest extends Base {
 		Assert.assertEquals( header,"Search List Sub Categories");
 	}
 	@Test(groups = "smoke")
-	public void verifyDeleteAlertMessage()
+	public void verifyAlertMessageWhileDeletion()
 	{
 		loginpage=new LoginPage(driver);
 		homepage=loginpage.login();

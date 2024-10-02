@@ -58,7 +58,7 @@ public class CategoryPage {
 
 	}
 
-	public String getTitleOfCategoryPage() {
+	public String getTitleOfCategorySearch() {
 		return driver.getTitle();
 		
 	}

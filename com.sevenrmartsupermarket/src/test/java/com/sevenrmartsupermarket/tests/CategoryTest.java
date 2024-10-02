@@ -15,17 +15,17 @@ public class CategoryTest extends Base {
 	CategoryPage categorypage;
 
 	@Test(groups = "smoke")
-	public void verifyListCategorySearch() {
+	public void verifyTitleOfCategorySearch() {
 		loginpage = new LoginPage(driver);
 		homepage = loginpage.login();
 		categorypage = homepage.clickOnCategoryMoreInfo();
 		categorypage.searchCategory("Seasonal Gifts");
-		String title = categorypage.getTitleOfCategoryPage();
+		String title = categorypage.getTitleOfCategorySearch();
 		Assert.assertEquals(title,"List Categories | 7rmart supermarket");
 	}
 
 	@Test(groups={"sanity","regression"})
-	public void verifyEditCategoryAlertMessage() {
+	public void verifyAlertMessageWhileEditCategory() {
 		loginpage = new LoginPage(driver);
 		homepage = loginpage.login();
 		categorypage = homepage.clickOnCategoryMoreInfo();

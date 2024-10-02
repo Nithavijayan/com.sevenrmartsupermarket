@@ -66,7 +66,7 @@ public class AdminUsersTest extends Base {
 	}
 
 	@Test(groups = "sanity")
-	public void verifyAdminSearch() {
+	public void verifyTextOfAdminSearchButton() {
 		loginpage = new LoginPage(driver);
 		homepage = loginpage.login();
 		adminuserspage = homepage.clickOnAdminUsersMoreInfo();

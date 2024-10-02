@@ -73,6 +73,7 @@ public class HomeTest extends Base {
 		homepage = loginPage.login();
 		homepage.clickOnCategoryMoreInfo();
 		String name = homepage.getTextOfWebsiteName();
+		System.out.println(name);
 		Assert.assertEquals(name,"7rmart supermarket");
 	}
 

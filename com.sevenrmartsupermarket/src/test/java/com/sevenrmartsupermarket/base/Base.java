@@ -13,13 +13,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-import com.github.dockerjava.api.model.Config;
 import com.sevenrmartsupermarket.constants.Constants;
 import com.sevenrmartsupermarket.utilities.ScreenShotCapture;
 import com.sevenrmartsupermarket.utilities.WaitUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.OperaDriverManager;
 
 public class Base {
 	public WebDriver driver;
@@ -37,8 +35,7 @@ public class Base {
 		}
 	}
 
-	public void initialize(String browser, String url)
-	{
+	public void initialize(String browser, String url) {
 		if (browser.contains("chrome")) {
 
 			WebDriverManager.chromedriver().setup();
@@ -58,21 +55,20 @@ public class Base {
 
 	}
 
-	@Parameters("browser") 
+	@Parameters("browser")
 	@BeforeMethod(enabled = false, alwaysRun = true)
 	public void initializeBrowser(String browser) {
 
 		String url = properties.getProperty("url");
 		initialize(browser, url);
 	}
-	
-	@BeforeMethod(enabled = true,alwaysRun = true)
+
+	@BeforeMethod(enabled = true, alwaysRun = true)
 	public void initializeBrowser() {
 		String browser = properties.getProperty("browser");
 		String url = properties.getProperty("url");
 		initialize(browser, url);
 	}
-
 
 	@AfterMethod(alwaysRun = true)
 	public void terminateSession(ITestResult itestresult) {

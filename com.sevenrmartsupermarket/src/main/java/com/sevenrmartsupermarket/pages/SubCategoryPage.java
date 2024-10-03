@@ -1,6 +1,5 @@
 package com.sevenrmartsupermarket.pages;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -71,13 +70,13 @@ public class SubCategoryPage {
 		pageutility.scrollAndClick(subCategorySearchButton);
 
 	}
-	public String getDeleteAlertMessage()
-	{
+
+	public String getDeleteAlertMessage() {
 		pageutility = new PageUtility(driver);
-		wait=new WaitUtility();
+		wait = new WaitUtility();
 		wait.waitForClickable(driver, deleteButton, 10);
 		deleteButton.click();
-		String message= pageutility.alertGetText();
+		String message = pageutility.alertGetText();
 		pageutility.alertAccept();
 		return message;
 	}

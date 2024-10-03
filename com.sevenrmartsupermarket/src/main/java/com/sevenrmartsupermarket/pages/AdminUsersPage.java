@@ -39,7 +39,6 @@ public class AdminUsersPage {
 	private WebElement adminSearchButton;
 	@FindBy(xpath = "//div[@class='col-sm-6']//h1")
 	private WebElement adminUsersHeader;
-	
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;
@@ -55,15 +54,14 @@ public class AdminUsersPage {
 		return searchButton.getText();
 	}
 
-
 	public void enterAdminUserName(String userName) {
 		userNameField.sendKeys(userName);
-	
+
 	}
 
 	public void enterAdminPassword(String password) {
 		passwordField.sendKeys(password);
-	
+
 	}
 
 	public void selectAdminUserType() {
@@ -101,12 +99,9 @@ public class AdminUsersPage {
 		return this;
 	}
 
-	
-
 	public AdminUsersPage searchAdminUser(String userName, int index) {
 		searchButton.click();
 		return this.enterUserName(userName).enterUserTypeDropDown(index).clickOnSearchButton();
-		
 
 	}
 

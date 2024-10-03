@@ -30,7 +30,7 @@ public class LoginPage {
 
 		try {
 			FileInputStream ip = new FileInputStream(Constants.CONFIG_FILE_PATH);
-			properties.load(ip);// properties file initialization completed
+			properties.load(ip);
 
 		} catch (Exception e) {
 			e.printStackTrace();

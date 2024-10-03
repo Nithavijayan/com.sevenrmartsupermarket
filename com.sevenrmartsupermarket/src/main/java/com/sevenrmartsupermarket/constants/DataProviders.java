@@ -13,10 +13,10 @@ public class DataProviders {
 	public Object[][] enterAdminLoginWithMultipleData()
 	{
 		excelreader.setExcelFile("Login", "Login Credentials");
-		return excelreader.getMultidimentionalData(2, 2);//data from excel
+		return excelreader.getMultidimentionalData(2, 2);
 	}
 	@DataProvider(name = "enterNewAdminUser")
-	public Object[][] enterNewAdminuserWithMultipleData()
+	public Object[][] enterNewAdminUserWithMultipleData()
 	{
 		excelreader.setExcelFile("AdminUsers","NewAdminUsers");
 		return excelreader.getMultidimentionalData(3, 2);

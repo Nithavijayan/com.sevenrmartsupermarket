@@ -60,13 +60,12 @@ public class CategoryPage {
 
 	public String getTitleOfCategorySearch() {
 		return driver.getTitle();
-		
+
 	}
 
 	public String getColorOfResetButton() {
 		return resetButton.getCssValue("color");
-		
+
 	}
-	
 
 }

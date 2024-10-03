@@ -67,7 +67,7 @@ public class HomeTest extends Base {
 	}
 
 	@Test(groups = "smoke")
-	public void verifyWesiteNameOfCategoryCard() {
+	public void verifyWebsiteNameOfCategoryCard() {
 
 		loginPage = new LoginPage(driver);
 		homepage = loginPage.login();

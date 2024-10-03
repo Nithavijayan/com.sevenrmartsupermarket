@@ -21,8 +21,8 @@ public class ScreenShotCapture {
 			File screenShot = takescreenshot.getScreenshotAs(OutputType.FILE);
 			String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());
 			String path = Constants.SCREENSHOT_FILE_PATH + imageName + "_" + timeStamp + ".png";
-			File destination = new File(path);// capturing screenshot
-			FileHandler.copy(screenShot, destination);// copying screenshot
+			File destination = new File(path);
+			FileHandler.copy(screenShot, destination);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

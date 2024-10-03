@@ -37,6 +37,9 @@ public class SubCategoryPage {
 	private WebElement subCategorySearchHeader;
 	@FindBy(xpath = "(//i[@class='fas fa-trash-alt'])[1]")
 	private WebElement deleteButton;
+	
+	@FindBy(xpath = "//i[@class='icon fas fa-check']")
+	private WebElement alertMessage;
 
 	public SubCategoryPage(WebDriver driver) {
 		this.driver = driver;
@@ -76,6 +79,7 @@ public class SubCategoryPage {
 		wait = new WaitUtility();
 		wait.waitForClickable(driver, deleteButton, 10);
 		deleteButton.click();
+		wait.waitForAlertIsPresent(driver, 10);
 		String message = pageutility.alertGetText();
 		pageutility.alertAccept();
 		return message;
